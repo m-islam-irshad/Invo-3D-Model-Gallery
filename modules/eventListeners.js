@@ -58,11 +58,11 @@ function onKeyDown(event, controls) {
     lockPointer = false;
   }
 
-  if (event.key === "p") {
-    // if the "SPACE" key is pressed
-    controls.unlock(); // unlock the pointer
-    lockPointer = false;
-  }
+  // if (event.key === "p") {
+  //   // if the "SPACE" key is pressed
+  //   controls.unlock(); // unlock the pointer
+  //   lockPointer = false;
+  // }
 
   if (event.key === "Enter") {
     // if the "ENTER" key is pressed
@@ -77,28 +77,28 @@ function onKeyDown(event, controls) {
     togglePointerLock(controls); // toggle the pointer lock
   }
 
-  if (event.key === "g") {
-    // if the "a" key is pressed
-    startAudio(); // start the audio guide
-  }
+  // if (event.key === "g") {
+  //   // if the "a" key is pressed
+  //   startAudio(); // start the audio guide
+  // }
 
-  if (event.key === "p") {
-    // if the "s" key is pressed
-    stopAudio(); // stop the audio guide
-  }
+  // if (event.key === "p") {
+  //   // if the "s" key is pressed
+  //   stopAudio(); // stop the audio guide
+  // }
 
-  if (event.key === "m") {
-    // if the "h" key is pressed
-    showMenu(); // show the menu
-    showMenuOnUnlock = true;
-    controls.unlock(); // unlock the pointer
-    lockPointer = false;
-  }
+  // if (event.key === "m") {
+  //   // if the "h" key is pressed
+  //   showMenu(); // show the menu
+  //   showMenuOnUnlock = true;
+  //   controls.unlock(); // unlock the pointer
+  //   lockPointer = false;
+  // }
 
-  if (event.key === "r") {
-    // if the "r" key is pressed
-    location.reload(); // reload the page
-  }
+  // if (event.key === "r") {
+  //   // if the "r" key is pressed
+  //   location.reload(); // reload the page
+  // }
 }
 
 function onKeyUp(event, controls) {
@@ -108,14 +108,14 @@ function onKeyUp(event, controls) {
   }
 }
 
-// document.getElementById("toggle-info").addEventListener("click", () => {
-//   document.getElementById("info-panel").classList.toggle("collapsed");
-//   document.getElementById("toggle-info").innerText = document
-//     .getElementById("info-panel")
-//     .classList.contains("collapsed")
-//     ? "Show"
-//     : "Hide";
-// });
+document.getElementById("toggle-info").addEventListener("click", () => {
+  document.getElementById("info-panel").classList.toggle("collapsed");
+  document.getElementById("toggle-info").innerText = document
+    .getElementById("info-panel")
+    .classList.contains("collapsed")
+    ? "Show"
+    : "Hide";
+});
 
 // document.getElementById("about_button").addEventListener("click", function () {
 //   document.getElementById("about-overlay").classList.add("show");
