@@ -31,18 +31,40 @@ export const updateMovement = (delta, controls, camera, walls) => {
   if (keysPressed.ArrowDown) {
     controls.moveForward(-moveSpeed);
   }
+  // if (keysPressed.s && camera.rotation.x >= -1.5) {
+  //   camera.rotateX(-0.05);
+  // }
+  // if (keysPressed.w && camera.rotation.x <= 1.5) {
+  //   camera.rotateX(0.05);
+  // }
+  // if (keysPressed.d) {
+  //   camera.rotateY(-0.05);
+  // }
+  // if (keysPressed.a) {
+  //   camera.rotateY(0.05);
+  // }
+
+  // const delta = clock.getDelta();
+
+  // Rotate the camera based on key inputs
+  const rotationSpeed = 1.0;
   if (keysPressed.s && camera.rotation.x >= -1.5) {
-    camera.rotateX(-0.05);
-  }
-  if (keysPressed.w && camera.rotation.x <= 1.5) {
-    camera.rotateX(0.05);
+    camera.rotation.x -= rotationSpeed * delta;
   }
   if (keysPressed.d) {
-    camera.rotateY(-0.05);
+    camera.rotation.y -= rotationSpeed * delta;
+  }
+  if (keysPressed.w && camera.rotation.x <= 1.5) {
+    camera.rotation.x += rotationSpeed * delta;
   }
   if (keysPressed.a) {
-    camera.rotateY(0.05);
+    camera.rotation.y += rotationSpeed * delta;
   }
+
+
+
+
+
 
   // After the movement is applied, we check for collisions by calling the checkCollision function. If a collision is detected, we revert the camera's position to its previous position, effectively preventing the player from moving through walls.
   if (checkCollision(camera, walls)) {

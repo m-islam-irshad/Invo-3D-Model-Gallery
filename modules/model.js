@@ -20,9 +20,21 @@ export const renderModel = (paintingNumber) => {
   let { camera, controls, renderer } = setupScene();
   // model.style.display = "block"; // Show the menu
   // var object = scene.getObjectByName( "camera", true );
-  const modeli = scene.getObjectByName('catModel')
-    // console.log('This is obj: ', modeli );
-    scene.remove(modeli)
+  const modeletc = scene.getObjectByName('catModel')
+  scene.remove(modeletc)
+  
+  const spotLight1Remove = scene.getObjectByName('spotLight1');
+  scene.remove(spotLight1Remove)
+  
+  const spotLight2Remove = scene.getObjectByName('spotLight2');
+  scene.remove(spotLight2Remove)
+  
+  const spotLight3Remove = scene.getObjectByName('spotLight3');
+  scene.remove(spotLight3Remove)
+  
+  const spotLight4Remove = scene.getObjectByName('spotLight4');
+  scene.remove(spotLight4Remove)
+
   renderer.renderLists.dispose();
   
   
